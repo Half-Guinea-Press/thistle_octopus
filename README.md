@@ -1,1 +1,1 @@
-# thistle_octopus
+# Thistle Octopus

@@ -49,19 +49,20 @@ if (typeof(Storage) !== "undefined") {
 } else {
   document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
 }
-</script>
 
 <h1>Custom Range Slider</h1>
 <p>Drag the slider to display the current value.</p>
 
 <div class="slidecontainer">
-  <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-  <p>Value: <span id="demo"></span></p>
+  <input type="range" min="1" max="100" value="50" class="slider" id="hpRange">
+  <p>Value: <span id="currentHp"></span></p>
 </div>
 
 <script>
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+var storedHp = localStorage.getItem('storedHp') || 75;
+var slider = document.getElementById("hpRange");
+var output = document.getElementById("currentHp");
+slider.value = storedHp;
 output.innerHTML = slider.value;
 
 slider.oninput = function() {

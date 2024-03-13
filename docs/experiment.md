@@ -37,6 +37,8 @@
 }
 </style>
 
+<div id="result"></div>
+
 <script>
 // Check browser support
 if (typeof(Storage) !== "undefined") {

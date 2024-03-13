@@ -62,7 +62,6 @@ if (typeof(Storage) !== "undefined") {
 var storedHp = localStorage.getItem('storedHp') || 75;
 var slider = document.getElementById("hpRange");
 var output = document.getElementById("currentHp");
-slider.value = storedHp;
 output.innerHTML = slider.value;
 
 slider.oninput = function() {
